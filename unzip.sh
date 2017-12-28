@@ -10,4 +10,9 @@ if [ -f ./ChromePublic.apk ]; then
 	rm -rf ./ChromePublic/assets
 	rm -rf ./ChromePublic/META-INF
 	rm -rf ./ChromePublic/res
+
+	cp ChromePublic.apk ./ChromePublic/ChromePublic.apk
+
+	zip -d ./ChromePublic/ChromePublic.apk lib/armeabi-v7a/libchrome.so
+	zip -d ./ChromePublic/ChromePublic.apk lib/armeabi-v7a/libchromium_android_linker.so
 fi
