@@ -3,6 +3,10 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE       := Chromium
 
+ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 24 || echo 1),)
+# minSdkVersion=24 (Nougat)
+LOCAL_SRC_FILES    := MonochromePublic.apk
+else
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 21 || echo 1),)
 # minSdkVersion=21 (Lollipop)
 LOCAL_SRC_FILES    := ChromeModernPublic.apk
@@ -12,6 +16,7 @@ else
 # minSdkVersion=16 (Jelly Bean)
 LOCAL_SRC_FILES    := ChromePublic/ChromePublic.apk
 LOCAL_REQUIRED_MODULES := libchrome libchromium_android_linker
+endif
 endif
 
 LOCAL_MODULE_TAGS   := optional
