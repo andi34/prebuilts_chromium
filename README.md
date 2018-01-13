@@ -11,6 +11,10 @@
 
 There's no issue while installing the apks!
 
+- Android Jelly Bean and newer: [Download ChromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromePublic.apk)
+- Android Lollipop and newer: [Download ChromeModernPublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromeModernPublic.apk)
+- Android Nougat and newer: [Download MonochromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/MonochromePublic.apk)
+
 
 ### Monochrome on Android 7+
 
@@ -50,7 +54,7 @@ curl https://raw.githubusercontent.com/andi34/prebuilt_chromium/master/patches/L
 ```
 
 
-### Multiple Chrome APK Targets (according to the build instructions)
+### Multiple Chrome APK Targets according to the build instructions
 
 1. `chrome_public_apk` (ChromePublic.apk)
    * `minSdkVersion=16` (Jelly Bean).
