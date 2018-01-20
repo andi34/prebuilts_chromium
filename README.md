@@ -40,7 +40,7 @@ AOSP Browser is absoloutly not up to date and should not be used on any roms the
 ### There's a great lightweight Browser, can't i use it?
 
 On Android 6+ it is ok to use a lightweight Browser which is using systems Webview implementation (as long as your system still gets security updates). 
-If you have access to Rom source and compiling the Rom yourself you can find an updated Chromium-based WebView Implementation below in the "Information for Developer".
+If you have access to Rom source and compiling the Rom yourself you can find an updated Chromium-based WebView Implementation below in the ["Information for Developer"](https://github.com/andi34/prebuilts_chromium#updated-chromium-based-webview).
 
 On Android 4 and older you should use a Browser which comes with it's own, updated, Webview.
 (Currently there's no good way to update WebView on Android 4.)
@@ -97,7 +97,7 @@ You can adapt those changes to your rom source if it isn't supported yet.
 ### Let's avoid patching our device tree or rom source to add Chromium prebuilt to our Rom
 
 - For Android 5 and below we are using ChromePublic.apk
-- For Android 6 and newer we are using ChromeModernPublic.apk (we use an update Webview Implementation, see below "Updated Chromium-based WebView")
+- For Android 6 and newer we are using ChromeModernPublic.apk (we use an updated Webview Implementation, see below ["Updated Chromium-based WebView"](https://github.com/andi34/prebuilts_chromium#updated-chromium-based-webview))
 
 
 ### How to use MonochromePublic on Android 7+
@@ -127,7 +127,7 @@ To use prebuilt MonochromePublic.apk on Android 7+ you need to add chromium to f
 ```
 Once that's done you need to [modify the Android.mk](https://github.com/andi34/prebuilts_chromium/commit/09cd63b824ffa08c2365d276d1540ba45cf3c865#diff-3ae6be565f1e33e90e0b11f768de1f6c) to use MonochromePublic.apk.
 
-Note: You can save some space while using ChromeModernPublic.apk and updating Webview inside your Rom source (see below "Updated Chromium-based WebView") instead using MonochromePublic.apk.
+Note: You can save some space while using ChromeModernPublic.apk and updating Webview inside your Rom source instead using MonochromePublic.apk, see below ["Updated Chromium-based WebView"](https://github.com/andi34/prebuilts_chromium#updated-chromium-based-webview).
 
 
 ### How to use ChromeModernPublic on Android 5
