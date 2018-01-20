@@ -26,6 +26,10 @@
 - Chromium: use startpage searchengine by default
 - Chromium: disable strict mode
 
+## H264 encoder support for Chromium
+
+Support for h264 encoder is not added for legal reasons
+
 
 ### Why using e.g. Chromium?
 
@@ -151,6 +155,36 @@ LOCAL_PREBUILT_JNI_LIBS_arm += @lib/armeabi-v7a/libchromium_android_linker.so
 You should use the updated WebView if you are compiling your Rom from source.
 
 
+### Build instructions
+
+You can find the build instructions [here](https://www.chromium.org/developers/how-tos/get-the-code) to Checkout, Build, & Run Chromium for your OS.
+
+
+### Our build settings
+
+Chromium for Android is compiled using the GN build tool. To match our build settings, set:
+
+```
+target_os = "android"
+is_debug = false
+symbol_level = 0
+enable_nacl = false
+remove_webcore_debug_symbols = true
+```
+
+in your GN argument file before building.
+
+
+### H264 encoder support for Chromium
+
+Support for h264 encoder is not added for legal reasons. If you like to compile Chromium yourself with h264 encoder support you need to extend your GN argument file with the following:
+
+```
+proprietary_codecs = true
+ffmpeg_branding = "Chrome"
+```
+
+
 ### Multiple Chrome APK Targets according to the official build instructions
 
 1. `chrome_public_apk` (ChromePublic.apk)
@@ -171,3 +205,4 @@ You should use the updated WebView if you are compiling your Rom from source.
    * Stores libchrome.so uncompressed within the APK.
    * Does not use Crazy Linker (WebView requires system linker).
      * But system linker supports crazy linker features now anyways.
+
