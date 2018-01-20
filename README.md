@@ -1,22 +1,59 @@
 # README
 
-
-### Avoid patching device tree or rom source to add Chromium prebuilt to your Rom
-
-- For Android 5 and below we are using ChromePublic.apk
-- For Android 6 and newer we are using ChromeModernPublic.apk
-
-
-### Note
-
-There's no issue while installing the apks!
+### DOWNLOAD
 
 - Android Jelly Bean and newer: [Download ChromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromePublic.apk)
 - Android Lollipop and newer: [Download ChromeModernPublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromeModernPublic.apk)
 - Android Nougat and newer: [Download MonochromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/MonochromePublic.apk)
 
 
-### Monochrome on Android 7+
+## Information for Developer
+
+You can use this repo to add Chromium prebuilt into your Rom. Please read below information.
+
+
+### How to add Chromium prebuilt into our Rom?
+
+Add Chromium to your build config once you have cloned this repo into your Rom source:
+
+```
+# Chromium Browser
+PRODUCT_PACKAGES += \
+    Chromium
+
+```
+(e.g. inside your device.mk)
+
+
+On most roms you can avoid adding Chromium to your device config.
+Most Roms support an easy way to add more packages - you only need to create
+```
+vendor/extra/product.mk
+```
+and add call the PRODUCT_PACKAGES from there.
+
+Here's an example of an local_manifest you can use:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="andi34"
+           fetch="https://github.com/andi34/" />
+
+  <project path="vendor/extra" name="android_vendor_extra" remote="andi34" revision="m" />
+  <project path="prebuilts/chromium-browser" name="prebuilts_chromium" remote="andi34" revision="master" />
+
+</manifest>
+```
+
+
+### Let's avoid patching our device tree or rom source to add Chromium prebuilt to our Rom
+
+- For Android 5 and below we are using ChromePublic.apk
+- For Android 6 and newer we are using ChromeModernPublic.apk
+
+
+### How to use MonochromePublic on Android 7+
 
 To use prebuilt MonochromePublic.apk on Android 7+ you need to add chromium to frameworks/base/core/res/res/xml/config_webview_packages.xml
 (Your can also add it to your device overlay).
@@ -41,9 +78,10 @@ To use prebuilt MonochromePublic.apk on Android 7+ you need to add chromium to f
     </webviewprovider>
 </webviewproviders>
 ```
+Once that's done you need to [modify the Android.mk](https://github.com/andi34/prebuilts_chromium/commit/09cd63b824ffa08c2365d276d1540ba45cf3c865#diff-3ae6be565f1e33e90e0b11f768de1f6c) to use MonochromePublic.apk.
 
 
-### Chrome/Chromium on Lollipop requires an extra patch
+### How to use ChromeModernPublic on Android 5
 
 On Android 5 ChromeModernPublic.apk can't be used as prebuilt without patching your Rom source:
 
@@ -52,9 +90,15 @@ Run these commands:
 cd build
 curl https://raw.githubusercontent.com/andi34/prebuilt_chromium/master/patches/Lollipop/0001-Fix-Chrome.patch | git am -
 ```
+Once that's done you need to modify the Android.mk to use ChromeModernPublic.apk:
+```
+LOCAL_SRC_FILES    := ChromeModernPublic.apk
+LOCAL_PREBUILT_JNI_LIBS_arm := @lib/armeabi-v7a/crazy.libchrome.so
+LOCAL_PREBUILT_JNI_LIBS_arm += @lib/armeabi-v7a/libchromium_android_linker.so
+```
 
 
-### Multiple Chrome APK Targets according to the build instructions
+### Multiple Chrome APK Targets according to the official build instructions
 
 1. `chrome_public_apk` (ChromePublic.apk)
    * `minSdkVersion=16` (Jelly Bean).
