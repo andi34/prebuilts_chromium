@@ -46,6 +46,14 @@ Here's an example of an local_manifest you can use:
 </manifest>
 ```
 
+CyanogenMod initial added support for an easy way to add more packages by the following changes:
+
+1. [add a hook to add extra packages](https://github.com/LineageOS/android_vendor_cm/commit/45e6598078e3a919ec644b8ad22bf9ad2912e876)
+2. [cm: Update use of vendor/extra](https://github.com/LineageOS/android_vendor_cm/commit/b9dd400b385b18519cad768b5ec45fcbe9973f22)
+3. [Allow vendor/cyngn overlays to override vendor/cm overlays](https://github.com/LineageOS/android_vendor_cm/commit/39b9aa83f003aaf9842bc091ef0a4c2d3d2d15e4)
+
+You can adapt those changes to your rom source if it isn't supported yet.
+
 
 ### Let's avoid patching our device tree or rom source to add Chromium prebuilt to our Rom
 
