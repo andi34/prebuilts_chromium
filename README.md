@@ -1,10 +1,30 @@
 # README
 
-### DOWNLOAD
+## DOWNLOAD
 
 - Android Jelly Bean and newer: [Download ChromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromePublic.apk)
 - Android Lollipop and newer: [Download ChromeModernPublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromeModernPublic.apk)
 - Android Nougat and newer: [Download MonochromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/MonochromePublic.apk)
+
+
+## Changes on top of official Chromium Source
+
+- enable dubious Do Not Track feature by default
+- disable navigation error correction by default
+- disable contextual search by default
+- disable network prediction by default
+- disable metrics by default
+- disable hyperlink auditing by default
+- disable autofill by default
+- disable first run welcome page
+- disable data reduction proxy promotions
+- mark non-secure origins as non-secure
+- add DuckDuckGo search engine
+- stop enabling search engine geolocation by default
+- use Chromium branding in more places
+- hide passwords.google.com link when not supported
+- Chromium: use startpage searchengine by default
+- Chromium: disable strict mode
 
 
 ## Information for Developer
