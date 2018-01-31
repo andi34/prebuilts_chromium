@@ -1,5 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(filter tuna maguro toro toroplus,$(TARGET_DEVICE)),)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE       := Chromium
 
@@ -44,4 +46,6 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
 LOCAL_SRC_FILES := ChromePublic/lib/armeabi-v7a/libchromium_android_linker.so
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_PREBUILT)
+endif
+
 endif
