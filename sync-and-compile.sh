@@ -25,11 +25,11 @@ git fetch
 
 if [ "$1" = "stable" ]; then
 	echo "compiling stable branch"
-	PATCHPATH="/home/andi/chromium/stablepatches"
-	git checkout 63.0.3239.126
-else
-	PATCHPATH="/home/andi/chromium/patches"
+	PATCHPATH="/home/andi/chromium/patches64"
 	git checkout 64.0.3282.162
+else
+	PATCHPATH="/home/andi/chromium/patches65"
+	git checkout 65.0.3325.64
 fi
 
 gclient sync
