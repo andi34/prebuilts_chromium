@@ -1,4 +1,4 @@
-# Chromium 64.0.3282.x
+# Chromium 65.0.3282.x
 
 ## DOWNLOAD
 
@@ -18,13 +18,18 @@
 - disable autofill by default
 - disable first run welcome page
 - disable data reduction proxy promotions
-- mark non-secure origins as non-secure
 - add DuckDuckGo search engine
-- stop enabling search engine geolocation by default
 - use Chromium branding in more places
-- hide passwords.google.com link when not supported
 - Chromium: use startpage searchengine by default
 - Chromium: disable strict mode
+
+
+## Extra Changes on top of official Chromium Source for 64.x only
+
+- mark non-secure origins as non-secure
+- stop enabling search engine geolocation by default
+- hide passwords.google.com link when not supported
+
 
 ## H264 encoder support for Chromium
 
