@@ -1,12 +1,10 @@
-# Chromium 65.0.3282.x
+# Chromium 65.0.3325.x
 
 ## DOWNLOAD
 
 - Android Jelly Bean and newer: [Download ChromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromePublic.apk)
 - Android Lollipop and newer: [Download ChromeModernPublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromeModernPublic.apk)
 - Android Nougat and newer: [Download MonochromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/MonochromePublic.apk)
-
-[Source](https://github.com/andi34/chromium_patches/tree/65)
 
 
 ## Changes on top of official Chromium Source
@@ -25,13 +23,16 @@
 - Chromium: use startpage searchengine by default
 - Chromium: disable strict mode
 
-[Source](https://github.com/andi34/chromium_patches/tree/64)
+[Source](https://github.com/andi34/chromium_patches/tree/65)
 
-## Extra Changes on top of official Chromium Source for 64.x only
+
+### Extra Changes on top of official Chromium Source for 64.x only
 
 - mark non-secure origins as non-secure
 - stop enabling search engine geolocation by default
 - hide passwords.google.com link when not supported
+
+[Source](https://github.com/andi34/chromium_patches/tree/64)
 
 
 ## H264 encoder support for Chromium
