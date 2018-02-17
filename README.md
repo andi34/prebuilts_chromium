@@ -6,6 +6,8 @@
 - Android Lollipop and newer: [Download ChromeModernPublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/ChromeModernPublic.apk)
 - Android Nougat and newer: [Download MonochromePublic.apk](https://github.com/andi34/prebuilt_chromium/raw/master/MonochromePublic.apk)
 
+[Source](https://github.com/andi34/chromium_patches/tree/65)
+
 
 ## Changes on top of official Chromium Source
 
@@ -23,6 +25,7 @@
 - Chromium: use startpage searchengine by default
 - Chromium: disable strict mode
 
+[Source](https://github.com/andi34/chromium_patches/tree/64)
 
 ## Extra Changes on top of official Chromium Source for 64.x only
 
