@@ -29,7 +29,7 @@ if [ "$1" = "stable" ]; then
 	git checkout 64.0.3282.162
 else
 	PATCHPATH="/home/andi/chromium/patches65"
-	git checkout 65.0.3325.80
+	git checkout 65.0.3325.100
 fi
 
 gclient sync
