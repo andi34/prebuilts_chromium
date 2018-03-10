@@ -1,4 +1,4 @@
-# Chromium 65.0.3325.x
+# Chromium 66.0.3359.x
 
 ## DOWNLOAD
 
@@ -14,7 +14,6 @@
 - disable contextual search by default
 - disable network prediction by default
 - disable metrics by default
-- disable hyperlink auditing by default
 - disable autofill by default
 - disable first run welcome page
 - disable data reduction proxy promotions
@@ -22,6 +21,13 @@
 - use Chromium branding in more places
 - Chromium: use startpage searchengine by default
 - Chromium: disable strict mode
+
+[Source](https://github.com/andi34/chromium_patches/tree/66)
+
+
+### Extra Changes on top of official Chromium Source for 64.x & 65.x
+
+- disable hyperlink auditing by default
 
 [Source](https://github.com/andi34/chromium_patches/tree/65)
 

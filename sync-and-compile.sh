@@ -2,9 +2,9 @@
 # Chromium
 #
 # Versions
-# 66 = alpha
-# 65 = beta
-# 64 = stable
+# 67 = alpha
+# 66 = beta
+# 65 = stable
 #
 #
 # https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/WBSeL0E6-70
@@ -23,14 +23,8 @@ cd "${ROOT}/src"
 gclient sync --with_branch_heads
 git fetch
 
-if [ "$1" = "stable" ]; then
-	echo "compiling stable branch"
-	PATCHPATH="/home/andi/chromium/patches64"
-	git checkout 64.0.3282.204
-else
-	PATCHPATH="/home/andi/chromium/patches65"
-	git checkout 65.0.3325.117
-fi
+PATCHPATH="/home/andi/chromium/patches66"
+git checkout 66.0.3359.23
 
 gclient sync
 
@@ -49,18 +43,18 @@ echo 3 | sudo /usr/bin/update-alternatives --config javap > /dev/null
 
 gn gen '--args=target_os="android" is_debug=false symbol_level=0 enable_nacl=false remove_webcore_debug_symbols=true' out/Default
 
-ninja -C out/Default chrome_public_apk
-ninja -C out/Default chrome_modern_public_apk
 ninja -C out/Default monochrome_public_apk
+ninja -C out/Default chrome_modern_public_apk
+ninja -C out/Default chrome_public_apk
 
 PUBLICAPK=$DATE-public
 mkdir -p $ROOT/$PUBLICAPK
 mv $ROOT/src/out/Default/apks/*.apk $ROOT/$PUBLICAPK/
 
 gn gen '--args=target_os="android" is_debug=false symbol_level=0 enable_nacl=false remove_webcore_debug_symbols=true proprietary_codecs=true ffmpeg_branding="Chrome"' out/Default
-ninja -C out/Default chrome_public_apk
-ninja -C out/Default chrome_modern_public_apk
 ninja -C out/Default monochrome_public_apk
+ninja -C out/Default chrome_modern_public_apk
+ninja -C out/Default chrome_public_apk
 
 PRIVATEAPK=$DATE-private
 mkdir -p $ROOT/$PRIVATEAPK
