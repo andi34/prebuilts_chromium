@@ -24,7 +24,7 @@ gclient sync --with_branch_heads
 git fetch
 
 PATCHPATH="/home/andi/chromium/patches66"
-git checkout 66.0.3359.53
+git checkout 66.0.3359.70
 
 gclient sync
 
