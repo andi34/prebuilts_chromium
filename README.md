@@ -1,4 +1,4 @@
-# Chromium 66.0.3359.x
+# Chromium 67.0.3396.x
 
 ## DOWNLOAD
 
@@ -25,7 +25,7 @@
 [Source](https://github.com/andi34/chromium_patches/tree/66)
 
 
-### Extra Changes on top of official Chromium Source for 64.x & 65.x
+### Extra Changes on top of official Chromium Source for 64.x & 65.x only
 
 - disable hyperlink auditing by default
 
