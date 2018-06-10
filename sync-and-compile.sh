@@ -2,9 +2,9 @@
 # Chromium
 #
 # Versions
-# 68 = alpha
-# 67 = beta
-# 66 = stable
+# 69 = alpha
+# 68 = beta
+# 67 = stable
 #
 #
 # https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/WBSeL0E6-70
@@ -23,8 +23,8 @@ cd "${ROOT}/src"
 gclient sync --with_branch_heads
 git fetch
 
-PATCHPATH="/home/andi/chromium/patches67"
-git checkout 67.0.3396.51
+PATCHPATH="/home/andi/chromium/patches68"
+git checkout 68.0.3440.21
 
 gclient sync
 
@@ -39,7 +39,10 @@ rm -rf out
 echo "Setting default jdk to 1.8"
 echo 3 | sudo /usr/bin/update-alternatives --config java > /dev/null
 echo 3 | sudo /usr/bin/update-alternatives --config javac > /dev/null
+echo 3 | sudo /usr/bin/update-alternatives --config javadoc > /dev/null
 echo 3 | sudo /usr/bin/update-alternatives --config javap > /dev/null
+echo 3 | sudo /usr/bin/update-alternatives --config jar > /dev/null
+echo 3 | sudo /usr/bin/update-alternatives --config jarsigner > /dev/null
 
 gn gen '--args=target_os="android" is_debug=false symbol_level=0 enable_nacl=false remove_webcore_debug_symbols=true' out/Default
 
