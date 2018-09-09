@@ -2,9 +2,9 @@
 # Chromium
 #
 # Versions
-# 70 = alpha
-# 69 = beta
-# 68 = stable
+# 71 = alpha
+# 70 = beta
+# 69 = stable
 #
 #
 # https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/WBSeL0E6-70
@@ -23,8 +23,8 @@ cd "${ROOT}/src"
 gclient sync --with_branch_heads
 git fetch
 
-PATCHPATH="/home/andi/chromium/patches/69"
-git checkout 69.0.3497.5
+PATCHPATH="/home/andi/chromium/patches/70"
+git checkout 70.0.3538.13
 
 gclient sync
 
