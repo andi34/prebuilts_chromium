@@ -1,4 +1,4 @@
-# Chromium 69.0.3497.x
+# Chromium 70.0.3538.x
 
 ## DOWNLOAD
 
@@ -9,20 +9,24 @@
 
 ## Changes on top of official Chromium Source
 
+- use Chromium branding in more places
 - enable dubious Do Not Track feature by default
 - disable navigation error correction by default
 - disable contextual search by default
 - disable network prediction by default
 - disable metrics by default
-- disable autofill by default
 - disable first run welcome page
 - disable data reduction proxy promotions
 - add DuckDuckGo search engine
-- use Chromium branding in more places
 - Chromium: use startpage searchengine by default
 - Chromium: disable strict mode
 
 [Source](https://github.com/andi34/chromium_patches/tree/66)
+
+
+### Extra Changes on top of official Chromium Source for 64.x - 69.x only
+
+- disable autofill by default
 
 
 ### Extra Changes on top of official Chromium Source for 64.x & 65.x only
