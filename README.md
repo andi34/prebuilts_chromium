@@ -1,4 +1,4 @@
-# Chromium 70.0.3538.x
+# Chromium 71.0.3578.x
 
 ## DOWNLOAD
 
