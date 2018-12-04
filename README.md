@@ -1,4 +1,4 @@
-# Chromium 71.0.3578.x
+# Chromium 72.0.3626.x
 
 ## DOWNLOAD
 
@@ -15,13 +15,16 @@
 - disable contextual search by default
 - disable network prediction by default
 - disable metrics by default
-- disable first run welcome page
 - disable data reduction proxy promotions
 - add DuckDuckGo search engine
 - Chromium: use startpage searchengine by default
 - Chromium: disable strict mode
 
 [Source](https://github.com/andi34/chromium_patches/tree/66)
+
+### Extra Changes on top of official Chromium Source for 64.x - 71.x only
+
+- disable first run welcome page
 
 
 ### Extra Changes on top of official Chromium Source for 64.x - 69.x only
