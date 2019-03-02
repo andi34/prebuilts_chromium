@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(filter tuna maguro toro toroplus,$(TARGET_DEVICE)),)
+ifeq ($(filter tuna maguro toro toroplus espresso espressowifi espresso3g p3100 p3110 p5100 p5110,$(TARGET_DEVICE)),)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := Chromium
